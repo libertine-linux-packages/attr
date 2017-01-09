@@ -2,7 +2,7 @@
 # Copyright © 2016 The developers of libertine linux's package attr. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/libertine-linux-packages/libertine/master/COPYRIGHT.
 
 
-variant=latest
+variant=upstream
 
 depends build_ccache
 build_needs ccache
@@ -20,7 +20,7 @@ depends build_autoconf
 build_needs autoconf autoheader autom4te autoreconf autoscan autoupdate ifnames
 
 depends build_automake
-build_needs automake attrocal
+build_needs automake aclocal
 
 depends build_gnum4
 build_needs m4
