@@ -28,6 +28,9 @@ build_needs m4
 depends build_musl_cross_make_host
 build_needs "$libertine_host"-cc "$libertine_host"-gcc "$libertine_host"-ar "$libertine_host"-ld "$libertine_host"-ranlib "$libertine_host"-strip
 
+depends build_paxctl
+build_needs paxctl
+
 depends build_busybox
 build_needs expr install sort ls sleep
 
@@ -58,5 +61,6 @@ libertine_compile_attr()
 	mkdir -m 0755 -p "$(libertine_public_outputInitramfsPath)"/etc
 	cp "$(libertine_public_outputHostSysrootPath)"/etc/xattr.conf "$(libertine_public_outputInitramfsPath)"/etc
 	
-	libertine_public_installAndStripBinariesIn bin getfattr setfattr
+	libertine_public_installAndStripBinaryIn bin getfattr
+	libertine_public_installAndStripBinaryIn bin setfattr
 }
