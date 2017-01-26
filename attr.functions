@@ -53,7 +53,7 @@ libertine_compile_attr()
 		
 	popd
 	
-	"$libertine_host"-strip "$(libertine_public_outputHostSysrootPath)"/usr/bin/attr
+	libertine_public_stripAndSecureBinary "$(libertine_public_outputHostSysrootPath)"/usr/bin/attr
 	
 	mkdir -m 0755 -p "$(libertine_public_outputInitramfsPath)"/etc
 	cp "$(libertine_public_outputHostSysrootPath)"/etc/xattr.conf "$(libertine_public_outputInitramfsPath)"/etc
