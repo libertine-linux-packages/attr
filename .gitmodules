@@ -1,3 +1,8 @@
+Updating origin
+https://github.com/libertine-linux-mirrors/attr
+Branch 'master' set up to track remote branch 'master' from 'origin'.
 [submodule "upstream"]
 	path = upstream
-	url = git://git.savannah.nongnu.org/attr.git
+	url = https://github.com/libertine-linux-mirrors/attr.git
+	branch = master
+	libertine-linux-upstream = git://git.savannah.nongnu.org/attr.git
